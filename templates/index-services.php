@@ -44,8 +44,12 @@
     <h2 class="sect__title">What we do?</h2>
 
     <ol class="services__list">
-      <?php foreach ( $services as $s ) : ?>
-        <li class="service text-ls">
+      <?php 
+        $i = 0;
+        foreach ( $services as $s ) : 
+        $animation_direction = $i % 2 ? 'appear-left' : 'appear-right';
+      ?>
+        <li class="service text-ls" animation="<?php echo $animation_direction ?>">
           <h3 class="service__title"><?php echo $s['title'] ?></h3>
           <div class="service__bottom">            
             <p class="service__descr"><?php echo $s['descr'] ?></p>
@@ -56,7 +60,10 @@
             </ul>
           </div>
         </li>
-      <?php endforeach ?>
+      <?php 
+        $i++;
+        endforeach 
+      ?>
     </ol>
   </div>
 </section>

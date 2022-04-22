@@ -193,13 +193,11 @@ textarea {
 .sect__title {
   font: 600 22px "Panchang";
   margin-bottom: 30px;
-  transition: transform 1s, opacity 1.5s;
-  opacity: 0;
-  transform: translateX(-100px);
 }
-.sect__title.loaded {
-  opacity: 1;
-  transform: translateX(0);
+.sect--columns__inner-title {
+  color: #6D37FF;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 .small-arrow {
@@ -243,6 +241,18 @@ textarea {
     font-size: 36px;
     margin-bottom: 40px;
   }
+  .sect--columns__inner {
+    display: flex;
+  }
+  .sect--columns__inner-title {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .sect--columns__inner-content {
+    max-width: 540px;
+    width: 100%;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1023.98px) {
   .container {
@@ -251,6 +261,9 @@ textarea {
 
   .sect {
     margin: 130px 0;
+  }
+  .sect--columns__inner-content {
+    max-width: 735px;
   }
 
   /*
@@ -322,6 +335,9 @@ textarea {
     font-size: 48px;
     margin-bottom: 50px;
   }
+  .sect--columns__inner-content {
+    max-width: 895px;
+  }
 
   .frame-hover--big .frame-hover__top::before, .frame-hover--big .frame-hover__top::after,
 .frame-hover--big .frame-hover__bottom::before,
@@ -329,6 +345,65 @@ textarea {
     width: 30px;
     height: 30px;
     border-width: 7px;
+  }
+}
+[animation] {
+  opacity: 0;
+}
+[animation][animation-active] {
+  opacity: 1;
+}
+[animation][animation=appear-left][animation-active] {
+  animation: appear-left 0.7s linear;
+}
+[animation][animation=appear-right][animation-active] {
+  animation: appear-right 0.7s linear;
+}
+[animation][animation=appear-top][animation-active] {
+  animation: appear-top 0.7s linear;
+}
+[animation][animation=appear-bottom][animation-active] {
+  animation: appear-bottom 0.7s linear;
+}
+
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @font-face {

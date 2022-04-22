@@ -13,12 +13,12 @@
   <?php 
     // styles
     foreach ( $page['styles'] as $style_name ) {
-      echo '<link rel="stylesheet" href="./assets/css/' . $style_name . '">';
+      echo '<link rel="stylesheet" href="./assets/css/' . $style_name . '.css">';
     }
 
     // scripts
     foreach ( $page['scripts'] as $script_name ) {
-      echo '<script defer src="./assets/js/' . $script_name . '"></script>';
+      echo '<script defer src="./assets/js/' . $script_name . '.js"></script>';
     }    
   ?>
 </head>
@@ -31,7 +31,7 @@
     <rect filter="url(#noise)" class="noise__rect"/>
   </svg>
 
-  <header class="hdr">
+  <header class="hdr" animation="appear-top">
     <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
       <rect filter="url(#noise)" class="noise__rect"/>
     </svg>
@@ -49,8 +49,8 @@
           </svg>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-              <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+              <li class="nav__item"><a href="/#services" class="nav__link">Services</a></li>
+              <li class="nav__item"><a href="/#works" class="nav__link">Works</a></li>
               <li class="nav__item"><a href="about" class="nav__link">About</a></li>
               <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
             </ul>

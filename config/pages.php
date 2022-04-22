@@ -1,15 +1,15 @@
 <?php
 $_pages = [
   'index' => [
-    'title' => 'Focus - index',
+    'title' => 'Fractales - index',
     'description' => '',
-    'scripts' => ['swiper-bundle.min.js', 'main.js', 'index-page.js'],
-    'styles' => ['style.css', 'index-page.css'],
+    'scripts' => ['swiper-bundle.min', 'main', 'index-page'],
+    'styles' => ['style', 'index-page'],
   ],
   'about' => [
-    'title' => 'Focus - about',
+    'title' => 'Fractales - about',
     'description' => '',
-    'scripts' => ['main.js'],
-    'styles' => ['style.css'],
+    'scripts' => ['main', 'about'],
+    'styles' => ['style', 'about'],
   ]
 ];

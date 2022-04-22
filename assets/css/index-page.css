@@ -983,26 +983,10 @@ button.swiper-pagination-bullet {
     max-width: 620px;
     font-size: 36px;
     margin-bottom: 40px;
-    filter: blur(8px);
-    transform: translateX(200px);
-    opacity: 0;
-    transition: transform 1s linear, filter 1s, opacity 2s;
-  }
-  .hero__title.activated {
-    filter: blur(0);
-    opacity: 1;
-    transform: translateX(0);
   }
   .hero__bottom {
     display: flex;
     align-items: center;
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: transform 1s linear, opacity 2s;
-  }
-  .hero__bottom.activated {
-    opacity: 1;
-    transform: translateX(0);
   }
   .hero__text {
     max-width: 380px;
@@ -1018,16 +1002,6 @@ button.swiper-pagination-bullet {
   .services .service {
     padding-left: 46px;
     position: relative;
-    transition: transform 1s, opacity 1.5s;
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  .services .service:nth-child(odd) {
-    transform: translateX(100px);
-  }
-  .services .service.loaded {
-    opacity: 1;
-    transform: translateX(0);
   }
   .services .service::before {
     counter-increment: list;
@@ -1051,18 +1025,6 @@ button.swiper-pagination-bullet {
 
   .cases__show-more {
     margin-top: 40px;
-  }
-  .cases .case-preview {
-    transition: transform 1s, opacity 1.5s;
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  .cases .case-preview:nth-child(odd) {
-    transform: translateX(100px);
-  }
-  .cases .case-preview.loaded {
-    opacity: 1;
-    transform: translateX(0);
   }
   .cases .case-preview__link {
     display: flex;

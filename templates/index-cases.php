@@ -5,8 +5,14 @@
     <h2 class="sect__title">Works</h2>
 
     <ul class="works__list">
-      <?php foreach ( $cases as $case ) : ?>
-        <li class="case-preview">
+      <?php 
+        $i = 0;
+        foreach ( $cases as $case ) : 
+          if ($i >= 3) break;
+          $animation_direction = $i % 2 ? 'appear-left' : 'appear-right';
+      ?>
+
+        <li class="case-preview" animation="<?php echo $animation_direction ?>">
           <a href="<?php echo $case['link'] ?>" class="case-preview__link frame-hover frame-hover--big">
             <span class="frame-hover__top"></span>
             <span class="frame-hover__bottom"></span>
@@ -33,7 +39,10 @@
             </div>
           </a>
         </li>
-      <?php endforeach ?>
+      <?php 
+        $i++;
+        endforeach 
+      ?>
     </ul>
 
     <button class="cases__show-more">Show more</button>

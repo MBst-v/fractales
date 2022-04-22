@@ -25,6 +25,14 @@ $cases = [
     'imgs_folder' => $imgs_dir . 'meta',
     'img_alt' => '...',
     'link' => '#',
-  ]
+  ],
+  [
+    'title' => 'Fortross premium furniture store',
+    'type' => 'Online shopping',
+    'descr' => 'We presented a premium product, maintaining a balance between interesting design solutions and website usability.',
+    'imgs_folder' => $imgs_dir . 'fortross',
+    'img_alt' => '...',
+    'link' => '#',
+  ],
 ]
 ?>
