@@ -26,3 +26,4 @@ var isInViewport = function(el) {
 
 //=require /modules/_header.js
 //=require /modules/_contacts-form.js
+//=require /modules/_animations.js
