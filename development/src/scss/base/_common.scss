@@ -10,6 +10,12 @@
   letter-spacing: 0.01em;
 }
 
+.title {
+  &-lg {
+    font: 600 28px/1.5 $--font-panchang;   
+  }
+}
+
 .sect {
   scroll-margin-top: 20px;
   margin: 90px 0;
@@ -68,6 +74,12 @@
     max-width: 760px;
   }
 
+  .title {
+    &-lg {
+      font-size: 75px;
+    }
+  }
+
   .sect {
     margin: 110px 0;
 
@@ -98,6 +110,12 @@
 @media screen and (min-width: 1023.98px) {
   .container {
     max-width: 1000px;
+  }
+
+  .title {
+    &-lg {
+      font-size: 100px; 
+    }
   }
   
   .sect {
@@ -197,6 +215,12 @@
   .container {
     max-width: 1240px;
   }  
+
+  .title {
+    &-lg {
+      font-size: 120px;
+    }
+  }
 
   .sect {
     margin: 160px 0;

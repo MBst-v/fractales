@@ -46,7 +46,7 @@ function dev() {
   watch(['./src/js/**/*.js'], js).on('change', browserSync.reload)
   watch(['./src/img/**/*.{svg,png,jpg,jpeg,webp}'], img).on('change', browserSync.reload)
   watch(['./src/fonts/*.*'], fonts).on('change', browserSync.reload)
-  watch(['../*.php', '../templates/**/*.php']).on('change', browserSync.reload)
+  watch(['../*.php', '../templates/**/*.php', '../cases/*.php']).on('change', browserSync.reload)
 }
 
 exports.css = css

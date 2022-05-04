@@ -5,10 +5,6 @@
 .about-hero {
   padding-top: 40px;
 
-  &__title {
-    font: 600 28px/1.5 $--font-panchang;    
-  }
-
   &__descr {
     margin: 10px 0 25px;
   }
@@ -81,10 +77,6 @@
   .about-hero {
     padding-top: 30px;
 
-    &__title {
-      font-size: 75px;
-    }
-
     &__descr {
       max-width: 310px;
       margin: 0 0 30px auto;
@@ -156,10 +148,6 @@
   .about-hero {    
     padding-top: 40px;
 
-    &__title {
-      font-size: 100px;      
-    }
-
     &__descr {
       max-width: 350px;
       margin: 10px 38px 40px auto;
@@ -222,10 +210,6 @@
 @media screen and (min-width: 1279.98px) {
   .about-hero {
     padding-top: 80px;
-
-    &__title {
-      font-size: 120px;
-    }
 
     &__descr {
       margin-top: 20px;
