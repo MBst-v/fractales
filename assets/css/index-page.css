@@ -694,6 +694,102 @@ button.swiper-pagination-bullet {
   color: rgba(26, 26, 26, 0.7);
 }
 
+.case-preview {
+  margin-bottom: 40px;
+}
+.case-preview:last-child {
+  margin-bottom: 0;
+}
+.case-preview__link {
+  display: block;
+}
+.case-preview__pic {
+  display: block;
+  position: relative;
+  height: 210px;
+}
+.case-preview__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.case-preview__descr {
+  margin-top: 20px;
+}
+.case-preview__type {
+  font: 500 12px/1.5 "Panchang";
+  color: #6D37FF;
+}
+.case-preview__title {
+  margin: 10px 0 15px;
+  font-size: 22px;
+}
+.case-preview__view-case {
+  display: none;
+}
+
+@media screen and (min-width: 767.98px) {
+  .case-preview__link {
+    display: flex;
+  }
+  .case-preview__pic {
+    width: 415px;
+    height: 310px;
+    flex-shrink: 0;
+  }
+  .case-preview__descr {
+    margin-top: 0;
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1023.98px) {
+  .case-preview__link:hover .case-preview__view-case {
+    opacity: 1;
+  }
+  .case-preview__pic {
+    width: 490px;
+    height: 365px;
+  }
+  .case-preview__type {
+    font-size: 16px;
+  }
+  .case-preview__title {
+    font-size: 32px;
+    margin: 10px 0 20px;
+  }
+  .case-preview__descr {
+    display: flex;
+    flex-flow: column;
+    padding: 0 30px 25px;
+  }
+  .case-preview__view-case {
+    display: flex;
+    align-items: center;
+    margin: auto 0 0 auto;
+    color: #6D37FF;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+@media screen and (min-width: 1279.98px) {
+  .case-preview__pic {
+    width: 580px;
+    height: 435px;
+  }
+  .case-preview__descr {
+    padding: 40px 50px;
+  }
+  .case-preview__type {
+    font-size: 16px;
+  }
+  .case-preview__title {
+    font-size: 36px;
+    margin: 10px 0 25px;
+  }
+}
 .hero {
   padding-top: 40px;
 }
@@ -775,42 +871,6 @@ button.swiper-pagination-bullet {
   height: 20px;
   margin-left: 15px;
   background: url("../img/icons/show-more-arrow.svg") no-repeat center/contain;
-}
-.cases .case-preview {
-  margin-bottom: 40px;
-}
-.cases .case-preview:last-child {
-  margin-bottom: 0;
-}
-.cases .case-preview__link {
-  display: block;
-}
-.cases .case-preview__pic {
-  display: block;
-  position: relative;
-  height: 210px;
-}
-.cases .case-preview__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.cases .case-preview__descr {
-  margin-top: 20px;
-}
-.cases .case-preview__type {
-  font: 500 12px/1.5 "Panchang";
-  color: #6D37FF;
-}
-.cases .case-preview__title {
-  margin: 10px 0 15px;
-  font-size: 22px;
-}
-.cases .case-preview__view-case {
-  display: none;
 }
 
 .technology__descr-box {
@@ -1026,18 +1086,6 @@ button.swiper-pagination-bullet {
   .cases__show-more {
     margin-top: 40px;
   }
-  .cases .case-preview__link {
-    display: flex;
-  }
-  .cases .case-preview__pic {
-    width: 415px;
-    height: 310px;
-    flex-shrink: 0;
-  }
-  .cases .case-preview__descr {
-    margin-top: 0;
-    padding: 0 30px;
-  }
 
   .technology__inner {
     display: flex;
@@ -1136,34 +1184,6 @@ button.swiper-pagination-bullet {
   }
   .services .service__list {
     font-size: 26px;
-  }
-
-  .cases .case-preview__link:hover .case-preview__view-case {
-    opacity: 1;
-  }
-  .cases .case-preview__pic {
-    width: 490px;
-    height: 365px;
-  }
-  .cases .case-preview__type {
-    font-size: 16px;
-  }
-  .cases .case-preview__title {
-    font-size: 32px;
-    margin: 10px 0 20px;
-  }
-  .cases .case-preview__descr {
-    display: flex;
-    flex-flow: column;
-    padding: 0 30px 25px;
-  }
-  .cases .case-preview__view-case {
-    display: flex;
-    align-items: center;
-    margin: auto 0 0 auto;
-    color: #6D37FF;
-    opacity: 0;
-    transition: opacity 0.3s;
   }
 
   .technology__descr {
@@ -1297,21 +1317,6 @@ button.swiper-pagination-bullet {
   }
   .services .service__list {
     font-size: 30px;
-  }
-
-  .cases .case-preview__pic {
-    width: 580px;
-    height: 435px;
-  }
-  .cases .case-preview__descr {
-    padding: 40px 50px;
-  }
-  .cases .case-preview__type {
-    font-size: 16px;
-  }
-  .cases .case-preview__title {
-    font-size: 36px;
-    margin: 10px 0 25px;
   }
 
   .technology__descr {

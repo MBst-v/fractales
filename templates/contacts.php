@@ -7,7 +7,7 @@
         <h3 class="contacts__sect-title">EMAIL</h3>
 
         <div class="contacts__sect-content">
-          <a href="mail:<?php echo CONTACTS['email'] ?>" class="contacts__link"><?php echo CONTACTS['email'] ?></a>
+          <a href="mail:<?php echo $email ?>" class="contacts__link"><?php echo $email ?></a>
         </div>
       </section>
 
@@ -15,7 +15,7 @@
         <h3 class="contacts__sect-title">PHONE</h3>
 
         <div class="contacts__sect-content">
-          <a href="mail:<?php echo CONTACTS['tel'] ?>" class="contacts__link"><?php echo CONTACTS['tel'] ?></a>
+          <a href="mail:<?php echo $tel ?>" class="contacts__link"><?php echo $tel ?></a>
         </div>
       </section>
 
@@ -24,7 +24,7 @@
 
         <div class="contacts__sect-content">
           <ul class="socials">
-            <?php foreach ( CONTACTS['socials'] as $name => $link ) : ?>
+            <?php foreach ( $socials as $name => $link ) : ?>
               <li class="socials__item">
                 <a href="<?php echo $link ?>" class="socials__link"><?php echo $name ?></a>
               </li>

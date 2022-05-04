@@ -1,8 +1,8 @@
-<?php require './header.php' ?>
+<?php require 'header.php' ?>
 
 <section class="about-hero">
   <div class="container">
-    <h1 class="about-hero__title" animation="appear-left">fractales dev</h1>
+    <h1 class="title-lg" animation="appear-left">fractales dev</h1>
     <p class="about-hero__descr text-ls" animation="appear-right">Focusing on individual details, we create a high-quality holistic product</p>
     <picture class="about-hero__pic" animation="appear-right">
       <source media="(min-width: 767.98px)" srcset="./assets/img/about-page/hero-lg.webp" type="image/webp">
@@ -16,10 +16,10 @@
 
 <?php
 
-require __ROOT__ . '/templates/about-us.php';
-require __ROOT__ . '/templates/about-values.php';
-require __ROOT__ . '/templates/about-team.php';
+require 'templates/about-us.php';
+require 'templates/about-values.php';
+require 'templates/about-team.php';
 
 ?>
 
-<?php require __ROOT__ . '/footer.php' ?>
+<?php require 'footer.php' ?>

@@ -186,6 +186,10 @@ textarea {
   letter-spacing: 0.01em;
 }
 
+.title-lg {
+  font: 600 28px/1.5 "Panchang";
+}
+
 .sect {
   scroll-margin-top: 20px;
   margin: 90px 0;
@@ -234,6 +238,10 @@ textarea {
     max-width: 760px;
   }
 
+  .title-lg {
+    font-size: 75px;
+  }
+
   .sect {
     margin: 110px 0;
   }
@@ -257,6 +265,10 @@ textarea {
 @media screen and (min-width: 1023.98px) {
   .container {
     max-width: 1000px;
+  }
+
+  .title-lg {
+    font-size: 100px;
   }
 
   .sect {
@@ -328,6 +340,10 @@ textarea {
     max-width: 1240px;
   }
 
+  .title-lg {
+    font-size: 120px;
+  }
+
   .sect {
     margin: 160px 0;
   }
@@ -346,93 +362,6 @@ textarea {
     height: 30px;
     border-width: 7px;
   }
-}
-[animation] {
-  opacity: 0;
-}
-[animation][animation-active] {
-  opacity: 1;
-}
-[animation][animation=appear-left][animation-active] {
-  animation: appear-left 0.7s linear;
-}
-[animation][animation=appear-right][animation-active] {
-  animation: appear-right 0.7s linear;
-}
-[animation][animation=appear-top][animation-active] {
-  animation: appear-top 0.7s linear;
-}
-[animation][animation=appear-bottom][animation-active] {
-  animation: appear-bottom 0.7s linear;
-}
-
-@keyframes appear-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes appear-right {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes appear-top {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appear-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@font-face {
-  font-family: "Heebo";
-  src: url("../fonts/Heebo-Regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Medium.woff") format("woff");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Panchang";
-  src: url("../fonts/Panchang-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
 }
 .contacts__sect {
   padding: 30px 0;
@@ -478,6 +407,7 @@ textarea {
   height: 150px;
 }
 .contacts .contact-form .file {
+  display: block;
   position: relative;
   margin: 15px 0 0 auto;
 }
@@ -598,6 +528,93 @@ textarea {
     max-width: 895px;
   }
 }
+[animation] {
+  opacity: 0;
+}
+[animation][animation-active] {
+  opacity: 1;
+}
+[animation][animation=appear-left][animation-active] {
+  animation: appear-left 0.7s linear;
+}
+[animation][animation=appear-right][animation-active] {
+  animation: appear-right 0.7s linear;
+}
+[animation][animation=appear-top][animation-active] {
+  animation: appear-top 0.7s linear;
+}
+[animation][animation=appear-bottom][animation-active] {
+  animation: appear-bottom 0.7s linear;
+}
+
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Panchang";
+  src: url("../fonts/Panchang-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
 body {
   background-color: #FAFAFF;
   font-family: "Poppins";
@@ -711,6 +728,7 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 .hdr .nav {
   margin-bottom: 100px;
@@ -826,7 +844,7 @@ body.no-scroll {
   }
 
   .ftr__inner {
-    padding: 30px 0 50px;
+    padding: 30px 0;
     flex-flow: row;
   }
   .ftr__rights {
@@ -856,9 +874,6 @@ body.no-scroll {
     color: #6D37FF;
   }
 
-  .ftr__inner {
-    padding: 30px 0 65px;
-  }
   .ftr__contacts {
     max-width: 550px;
     display: flex;
@@ -884,6 +899,6 @@ body.no-scroll {
   }
 
   .ftr__inner {
-    padding: 30px 0 120px;
+    padding: 30px 0 90px;
   }
 }

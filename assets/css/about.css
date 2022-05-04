@@ -54,9 +54,6 @@
 .about-hero {
   padding-top: 40px;
 }
-.about-hero__title {
-  font: 600 28px/1.5 "Panchang";
-}
 .about-hero__descr {
   margin: 10px 0 25px;
 }
@@ -106,9 +103,6 @@
 @media screen and (min-width: 767.98px) {
   .about-hero {
     padding-top: 30px;
-  }
-  .about-hero__title {
-    font-size: 75px;
   }
   .about-hero__descr {
     max-width: 310px;
@@ -164,9 +158,6 @@
   .about-hero {
     padding-top: 40px;
   }
-  .about-hero__title {
-    font-size: 100px;
-  }
   .about-hero__descr {
     max-width: 350px;
     margin: 10px 38px 40px auto;
@@ -213,9 +204,6 @@
 @media screen and (min-width: 1279.98px) {
   .about-hero {
     padding-top: 80px;
-  }
-  .about-hero__title {
-    font-size: 120px;
   }
   .about-hero__descr {
     margin-top: 20px;

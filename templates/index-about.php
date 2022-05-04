@@ -22,7 +22,7 @@ $steps_list = [
   ],
 ];
 
-$team = $_team;
+$team = $db['team'];
 ?>
 
 <section class="about sect text-ls">

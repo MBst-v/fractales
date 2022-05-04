@@ -1,35 +1,35 @@
 <?php
-$_photo_dir = './assets/img/team/';
-$_team = [
+$team_photo_dir = './assets/img/team/';
+$team = [
   [
     'name' => 'Andrey',
     'position' => 'Executive Director',
-    'photo' => $_photo_dir . 'Andrey',
+    'photo' => $team_photo_dir . 'Andrey',
   ],
   [
     'name' => 'Alexandra',
     'position' => 'Director of Sales',
-    'photo' => $_photo_dir . 'Alexandra',
+    'photo' => $team_photo_dir . 'Alexandra',
   ],
   [
     'name' => 'Sofia',
     'position' => 'UX/UI Designer',
-    'photo' => $_photo_dir . 'Sofia',
+    'photo' => $team_photo_dir . 'Sofia',
   ],
   [
     'name' => 'Alexandra',
     'position' => 'Director of Sales',
-    'photo' => $_photo_dir . 't1',
+    'photo' => $team_photo_dir . 't1',
   ],
   [
     'name' => 'Sofia',
     'position' => 'UX/UI Designer',
-    'photo' => $_photo_dir . 't2',
+    'photo' => $team_photo_dir . 't2',
   ],
   [
     'name' => 'Alexandra',
     'position' => 'Director of Sales',
-    'photo' => $_photo_dir . 't3',
+    'photo' => $team_photo_dir . 't3',
   ],
 ];
 ?>

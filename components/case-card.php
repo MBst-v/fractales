@@ -1,13 +1,13 @@
 <?php
-function get_case_card($case, $animation = true, $index = 0, $tag = 'li') {
-  $animation_direction = $index % 2 ? 'appear-left' : 'appear-right';
-  $animation_attr = ' animation="' . $animation_direction . '"';
-
-  if ($animation === false) {
-    $animation_attr = '';
+function get_case_card($case, $index = 0, $animation = true, $tag = 'li') {
+  $animation_attr = '';
+  
+  if ($animation === true) {
+    $animation_direction = $index % 2 ? 'appear-left' : 'appear-right';
+    $animation_attr = ' animation="' . $animation_direction . '"';
   }
 
-  $link = $case['link'];
+  $link = $case['page_link'];
   $imgs_folder = $case['imgs_folder'];
   $img_alt = $case['img_alt'];
   $type = $case['type'];
