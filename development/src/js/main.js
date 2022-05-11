@@ -24,6 +24,9 @@ var isInViewport = function(el) {
   }
 };
 
-//=require /modules/_header.js
+window.addEventListener('load', function() {
+  //=require /modules/_header.js
+  //=require /modules/_animations.js
+});
+
 //=require /modules/_contacts-form.js
-//=require /modules/_animations.js
