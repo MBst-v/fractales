@@ -1,5 +1,5 @@
-@import './assets/fonts';
 @import './assets/variables';
+@import './base/work-card';
 
 .case {
   padding-top: 30px;
@@ -75,17 +75,58 @@
 
 @media screen and (min-width: 767.98px) {
   .case {
+    .sect--columns__inner-content {
+      max-width: 535px;
+    }
+
     &-hdr {
       &__title {
         font-size: 36px;
+        margin-top: 30px;  
       }
+    }
+
+    .info {
+      &__title {
+        font-size: 16px;
+      }
+
+      &__lists {
+        display: flex;
+      }
+
+      .tools {
+        width: 50%;
+      }
+    }
+
+    .pic {
+      margin-top: 50px;
     }
   }
 }
 
 @media screen and (min-width: 1023.98px) {
   .case {
+    padding-top: 40px;
+
+    .sect--columns__inner-content {
+      max-width: 680px;
+    }
+
+    &__sect-title {
+      font-size: 20px;
+    }
+
+    &-hdr {
+      &__title {
+        font-size: 48px;
+        margin: 40px 0;
+      }
+    }
+
     .pic {
+      margin-top: 70px;
       max-width: 960px;
     }
   }
@@ -93,6 +134,23 @@
 
 @media screen and (min-width: 1279.98px) {
   .case {
+    padding-top: 50px;
+
+    .sect--columns__inner-content {
+      max-width: 715px;
+    }
+
+    &__sect-title {
+      font-size: 24px;
+    }
+
+    &-hdr {
+      &__title {
+        font-size: 60px;
+        margin-top: 50px;
+      }
+    }
+
     .pic {
       max-width: 1200px;
     }

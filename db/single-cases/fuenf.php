@@ -63,6 +63,10 @@
         'img_name' => 'purchase',
         'img_alt' => ''
       ]
+    ],
+
+    'templates' => [
+      'fuenf-results.php',
     ]
   ];
 ?>

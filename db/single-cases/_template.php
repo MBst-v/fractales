@@ -10,7 +10,7 @@ $__case_name__ = [
   // шапка
   'header' => [
     'img_alt' => '',
-    'title' =>
+    'title' => '',
   ]
 ]
 ?>

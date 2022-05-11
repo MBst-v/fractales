@@ -129,4 +129,30 @@
 
   <?php endforeach ?>
 
+  <?php
+    $templates = $case['templates'];
+
+    if (isset($templates) && count($templates) > 0) {
+      foreach ( $templates as $template ) {
+        require '../templates/' . $template;
+      }
+    }
+  ?>
+
 </article>
+
+<section class="next-project sect">
+  <div class="container">
+    <h2 class="sect__title">Next project</h2>
+
+    <?php
+      $filtered_cases = array_filter($db['cases'], function($var) {
+        global $case;
+        return $var !== $case;
+      });
+      $random_case_name = array_rand($filtered_cases);
+      echo get_case_card($db['cases'][$random_case_name], 0, true, 'div')
+    ?>
+
+  </div>
+</section>
