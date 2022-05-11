@@ -8,8 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
 
   <meta name="description" content="<?php echo $page['description'] ?>">
-  <link rel="canonical" href="<?php echo $site_url ?>">
-  <link rel="shortlink" href="<?php echo $site_url ?>">
 
   <title><?php echo $page['title'] ?></title>
 

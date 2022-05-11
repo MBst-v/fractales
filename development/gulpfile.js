@@ -6,7 +6,7 @@ const webp = require('gulp-webp');
 const ttfToWoff = require("gulp-ttf-to-woff");
 
 // const serverUrl = 'http://focus'
-const serverUrl = 'http://localhost:8888/focus'
+const serverUrl = 'http://localhost:8888/fractales.dev'
 
 function css() {
   return src('./src/scss/*.scss')

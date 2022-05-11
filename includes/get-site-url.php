@@ -1,16 +1,22 @@
 <?php
-  function get_site_url() {
-    global $_SERVER;
-    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'];
-    $site_name = explode( '/', $_SERVER["REQUEST_URI"] )[1];
+function get_site_url()
+{
+  global $_SERVER;
+  $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+  $host = $_SERVER['HTTP_HOST'];
 
-    $site_url = $protocol . ':' . '//' . $host . '/' . $site_name;
-    
-    if (substr($site_url, -1) === '/') {
-      $site_url = substr($site_url, 0, -1);
-    }
-    
-    return $site_url;
+  $site_url = $protocol . '://' . $_SERVER['HTTP_HOST'];
+
+  if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+    $site_url .= '/' . explode( '/', $_SERVER["REQUEST_URI"] )[1];
   }
-?>
+
+  return $site_url;
+}
+
+function get_current_url()
+{
+
+  $url = get_site_url() . '/' . $_SERVER['REQUEST_URI'];
+  return $url;
+}
