@@ -49,7 +49,17 @@
       'description' => '',
       'scripts' => [],
       'styles' => [
+        'case' =>  '1.0.0',
         'fuenf' =>  '1.0.0'
+      ],
+    ],
+
+    'demetra' => [
+      'title' => 'Fractales - demetra',
+      'description' => '',
+      'scripts' => [],
+      'styles' => [
+        'case' =>  '1.0.0',
       ],
     ],
   ]

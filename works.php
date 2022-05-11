@@ -8,7 +8,7 @@
       <?php 
         $i = 0;
         foreach ( $cases as $name => $case ) {
-          echo get_case_card( $case['card_info'], $i );
+          echo get_case_card( $case, $i );
           $i++;
         }
       ?>

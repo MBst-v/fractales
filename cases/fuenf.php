@@ -1,9 +1,8 @@
-<?php require '../header.php' ?>
+<?php 
+require '../header.php';
 
-<article class="case">
-  <picture>
-    
-  </picture>
-</article>
+$case = $db['cases']['fuenf'];
+require '../templates/case.php';
 
-<?php require '../footer.php' ?>
+require '../footer.php';
+?>

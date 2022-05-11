@@ -6,27 +6,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+
+  <meta name="description" content="<?php echo $page['description'] ?>">
+  <link rel="canonical" href="<?php echo $site_url ?>">
+  <link rel="shortlink" href="<?php echo $site_url ?>">
+
   <title><?php echo $page['title'] ?></title>
 
-<?php 
-  // styles
-    foreach ( $pages['global']['styles'] as $style_name => $ver ) {
-      echo get_style_link($style_name);
-    }
+  <?php 
+    // styles
+      foreach ( $pages['global']['styles'] as $style_name => $ver ) {
+        echo get_style_link($style_name);
+      }
 
-    foreach ( $page['styles'] as $style_name => $ver ) {
-      echo get_style_link($style_name);
-    }
+      foreach ( $page['styles'] as $style_name => $ver ) {
+        echo get_style_link($style_name);
+      }
 
-  // scripts
-  foreach ( $pages['global']['scripts'] as $script_name => $ver ) {
-    echo get_script_link($script_name, $ver);
-  }  
+    // scripts
+    foreach ( $pages['global']['scripts'] as $script_name => $ver ) {
+      echo get_script_link($script_name, $ver);
+    }  
 
-  foreach ( $page['scripts'] as $script_name => $ver ) {
-    echo get_script_link($script_name, $ver);
-  } 
-?>
+    foreach ( $page['scripts'] as $script_name => $ver ) {
+      echo get_script_link($script_name, $ver);
+    } 
+  ?>
+  <!-- FAV -->
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $site_url ?>/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $site_url ?>/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $site_url ?>/fav/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo $site_url ?>/fav/site.webmanifest">
+  <link rel="mask-icon" href="<?php echo $site_url ?>/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ff7842">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAV -->
 </head>
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" class="noise body-noise">
@@ -44,11 +58,11 @@
 
     <div class="container">
       <div class="hdr__inner">
-        <a href="<?php echo get_site_url() ?>" class="hdr__logo">
-          <img src="<?php echo get_site_url() ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
+        <a href="<?php echo $site_url ?>" class="hdr__logo">
+          <img src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
         </a>
 
-        <button class="burger" aria-label="open menu"></button>
+        <button class="burger" title="toggle menu"></button>
 
         <div class="hdr__menu">          
           <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__menu-noise">
@@ -56,9 +70,9 @@
           </svg>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="<?php echo get_site_url() ?>/#services" class="nav__link">Services</a></li>
-              <li class="nav__item"><a href="<?php echo get_site_url() ?>/works" class="nav__link">Works</a></li>
-              <li class="nav__item"><a href="<?php echo get_site_url() ?>/about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="<?php echo $site_url ?>/#services" class="nav__link">Services</a></li>
+              <li class="nav__item"><a href="<?php echo $site_url ?>/works" class="nav__link">Works</a></li>
+              <li class="nav__item"><a href="<?php echo $site_url ?>/about" class="nav__link">About</a></li>
               <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
             </ul>
           </nav>

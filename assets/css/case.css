@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Panchang";
+  src: url("../fonts/Panchang-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Panchang";
+  src: url("../fonts/Panchang-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+.case {
+  padding-top: 30px;
+}
+.case-hdr__title {
+  font: 600 26px/1.5 "Panchang";
+  margin: 20px 0 30px;
+}
+.case-hdr__pic {
+  margin-top: 0 !important;
+}
+.case__sect-title {
+  font-size: 18px;
+}
+.case__text-content strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.case .pic {
+  display: block;
+  max-width: 720px;
+  margin: 40px auto 0;
+}
+.case .info {
+  margin-top: 0;
+}
+.case .info__title {
+  font: 500 12px/1.5 "Panchang";
+  margin-bottom: 30px;
+}
+.case .info__lists {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #CECCE5;
+}
+.case .info .tools {
+  margin-bottom: 30px;
+}
+.case .info .tools:last-child {
+  margin-bottom: 0;
+}
+.case .info .tools__title {
+  font: 500 14px/1.5 "Panchang";
+  margin-bottom: 10px;
+}
+.case .info .tools__list-item {
+  margin-bottom: 5px;
+}
+.case .info .tools__list-item:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 767.98px) {
+  .case-hdr__title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1023.98px) {
+  .case .pic {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1279.98px) {
+  .case .pic {
+    max-width: 1200px;
+  }
+}

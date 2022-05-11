@@ -7,7 +7,7 @@
         $i = 0;
         foreach ( $db['cases'] as $name => $case ) {
           if ( $i === 3 ) break;
-          echo get_case_card( $case['card_info'], $i );
+          echo get_case_card( $case, $i );
           $i++;
         }
       ?>
