@@ -15,7 +15,7 @@
         <h3 class="contacts__sect-title">PHONE</h3>
 
         <div class="contacts__sect-content">
-          <a href="mail:<?php echo $tel ?>" class="contacts__link"><?php echo $tel ?></a>
+          <a href="mail:<?php echo $tel_link ?>" class="contacts__link"><?php echo $tel ?></a>
         </div>
       </section>
 
@@ -47,7 +47,7 @@
 
             <label class="file">
               <input type="file" name="file" class="file__input">
-              <div class="file__field">Attach file</div>
+              <span class="file__field">Attach file</span>
             </label>
 
             <div class="contact-form__bottom">

@@ -46,12 +46,12 @@
       <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="3" stitchTiles="stitch"/>
       <feBlend mode="screen"/>
     </filter>
-    <rect filter="url(#noise)" class="noise__rect"/>
+    <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
   </svg>
 
   <header class="hdr" animation="appear-top">
     <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
-      <rect filter="url(#noise)" class="noise__rect"/>
+      <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
     </svg>
 
     <div class="container">
@@ -64,7 +64,7 @@
 
         <div class="hdr__menu">          
           <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__menu-noise">
-            <rect filter="url(#noise)" class="noise__rect"/>
+            <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
           </svg>
           <nav class="nav">
             <ul class="nav__list">
@@ -77,11 +77,11 @@
 
           <div class="hdr__contacts">
             <a class="hdr__contacts-link" href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
-            <a class="hdr__contacts-link" href="tel:<?php echo $tel ?>"><?php echo $tel ?></a>
+            <a class="hdr__contacts-link" href="tel:<?php echo $tel_link ?>"><?php echo $tel ?></a>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="main" role="main">
+  <main class="main">
