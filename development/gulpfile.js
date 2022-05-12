@@ -11,9 +11,7 @@ const ifElse = require('gulp-cond');
 const csso = require('gulp-csso');
 const combine = require('stream-combiner2').obj;
 const uglify = require('gulp-uglify-es').default;
-
-const simpleGit = require('simple-git');
-simpleGit().clean(simpleGit.CleanOptions.FORCE);
+const ghPages = require('gulp-gh-pages');
 
 // const serverUrl = 'http://focus'
 const serverUrl = 'http://localhost:8888/fractales.dev'
@@ -82,13 +80,13 @@ function php() {
    .pipe(dest('../.build'))
 }
 
-function gitC(cb) {
-  const git = simpleGit('../.build')
-  git.status().then((d) => console.log(d))
-
-  cb()
+function gitProduction() {
+  return src(['../.build/**/*'])
+    .pipe(ghPages({
+      branch: 'prod'
+    }))
 }
 
 exports.css = css
 exports.dev = series(clean, parallel(css, js, img, fonts), dev)
-exports.build = series(clean, parallel(css), gitC)
+exports.build = series(clean, parallel(css), gitProduction)
