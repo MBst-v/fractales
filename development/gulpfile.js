@@ -1,39 +1,58 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
+const del = require('del');
 const sass = require('gulp-sass')(require('sass'));
+const gcmq = require('gulp-group-css-media-queries');
 const include = require('gulp-include')
 const browserSync = require('browser-sync').create();
 const webp = require('gulp-webp');
 const ttfToWoff = require("gulp-ttf-to-woff");
+const gulpIf = require('gulp-if');
+const ifElse = require('gulp-cond');
+const csso = require('gulp-csso');
+const combine = require('stream-combiner2').obj;
+const uglify = require('gulp-uglify-es').default;
+
+const simpleGit = require('simple-git');
+simpleGit().clean(simpleGit.CleanOptions.FORCE);
 
 // const serverUrl = 'http://focus'
 const serverUrl = 'http://localhost:8888/fractales.dev'
 
+const isProd = process.env.NODE_ENV === 'production'
+
 function css() {
   return src('./src/scss/*.scss')
     .pipe(sass())
-    .pipe(dest('../assets/css/'))
+    .pipe(gulpIf(isProd, combine(
+      gcmq(),
+      csso()
+    )))
+    .pipe(ifElse(isProd, dest('../.build/assets/css/'), dest('../assets/css/')))
 }
 
 function js() {
   return src(['./src/js/*.js', './src/js/vendor/*.js', './src/js/modules/*.js', '!./src/js/**/_*.js'])
     .pipe(include())
-    .pipe(dest('../assets/js/'))
+    .pipe(gulpIf(isProd, uglify()))
+    .pipe(ifElse(isProd, dest('../.build/assets/js/'), dest('../assets/js/')))
 }
 
 function fonts() {
   src('./src/fonts/*.ttf')
     .pipe(ttfToWoff())
     .pipe(dest('../assets/fonts/'))    
+    .pipe(ifElse(isProd, dest('../.build/assets/fonts/'), dest('../assets/fonts/')))    
 
-  return src('./src/fonts/*.woff')
-    .pipe(dest('../assets/fonts/'))
+  return src('./src/fonts/*.woff')    
+    .pipe(ifElse(isProd, dest('../.build/assets/fonts/'), dest('../assets/fonts/')))  
 }
 
 function img() {
   return src('./src/img/**/*.{svg,png,jpg,jpeg,webp}')
-    .pipe(dest('../assets/img/'))
+    .pipe(dest('../assets/img/'))  
+    .pipe(ifElse(isProd, dest('../.build/assets/img/'), dest('../assets/img/')))  
     .pipe(webp())
-    .pipe(dest('../assets/img/'))
+    .pipe(ifElse(isProd, dest('../.build/assets/img/'), dest('../assets/img/')))  
 }
 
 function dev() {
@@ -49,5 +68,27 @@ function dev() {
   watch(['../*.php', '../templates/**/*.php', '../cases/*.php']).on('change', browserSync.reload)
 }
 
+function clean() {
+  const destFolder = isProd ? ['../.build'] : ['../assets']
+  return del(['../.build'], {force: true})
+}
+
+// для production env
+function php() {
+  src('../*.htaccess')
+    .pipe(dest('../.build'))
+
+  return src('../**/*.php')
+   .pipe(dest('../.build'))
+}
+
+function gitC(cb) {
+  const git = simpleGit('../.build')
+  git.status().then((d) => console.log(d))
+
+  cb()
+}
+
 exports.css = css
-exports.dev = dev
+exports.dev = series(clean, parallel(css, js, img, fonts), dev)
+exports.build = series(clean, parallel(css), gitC)
