@@ -10,6 +10,7 @@ $page = [];
 $page = array_merge($page, $db['pages'][$current_page_name]);
 
 $tel = $db['contacts']['tel'];
+$tel_link = str_replace(' ', '', $tel);
 $address = $db['contacts']['address'];
 $email = $db['contacts']['email'];
 $socials = $db['contacts']['socials'];
